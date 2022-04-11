@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.emmanuelburaimo.virginmoney.view.fragment.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_peopleListFragment"
+            app:destination="@id/peopleListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_roomListFragment"
+            app:destination="@id/roomListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/peopleListFragment"
+        android:name="com.emmanuelburaimo.virginmoney.view.fragment.PeopleListFragment"
+        android:label="fragment_people_list"
+        tools:layout="@layout/fragment_people_list" >
+        <action
+            android:id="@+id/action_peopleListFragment_to_peopleDetailsFragment"
+            app:destination="@id/peopleDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/roomListFragment"
+        android:name="com.emmanuelburaimo.virginmoney.view.fragment.RoomListFragment"
+        android:label="fragment_room_list"
+        tools:layout="@layout/fragment_room_list" />
+    <fragment
+        android:id="@+id/peopleDetailsFragment"
+        android:name="com.emmanuelburaimo.virginmoney.view.fragment.PeopleDetailsFragment"
+        android:label="fragment_people_details"
+        tools:layout="@layout/fragment_people_details" />
+</navigation>
